@@ -10,9 +10,19 @@ public class Livro {
     // atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     private String titulo;
     private String autor;
+
+    // construtor
+    public Livro() {
+    }
+
+    public Livro(int id, String titulo, String autor) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+    }
 
     // getters e setters
 
